@@ -48,9 +48,11 @@
 				!
 			</h1>
 			<h2 class="mb-4 text-gray-700 dark:text-gray-200">
-				An opinionated blog starter for <span class="font-semibold"
-					>SvelteKit + Tailwind + Netlify.</span
-				> Refreshed for 2022!
+				Posts on post-production productivity tools and workflow automation development.
+				A lot of ❤️ for 
+				<span class="font-semibold">
+					DaVinci Resolve + Python + FFmpeg.
+				</span>
 			</h2>
 			<p class="mb-16 text-gray-600 dark:text-gray-400">
 				<a href={REPO_URL}>View source here!</a>
