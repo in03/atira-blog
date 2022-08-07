@@ -10,6 +10,7 @@
 <script>
 	// import Nav from '../components/Nav.svelte';
 	import { dev } from '$app/env';
+	import RiveCanvas from '../components/RiveCanvas.svelte';
 
 	export let url;
 	export let status;
@@ -21,7 +22,7 @@
 
 	let title = offline ? 'Offline' : status;
 	if (status === 404) {
-		title = 'Page not found :(';
+		title = 'Page not found ';
 		message = 'Sorry! If you think this URL is broken, please let me know!';
 	}
 </script>
@@ -31,9 +32,12 @@
 </svelte:head>
 
 <section class="container prose mx-auto py-12 dark:prose-invert">
-	<h1>{status}: {title}</h1>
+	<h1>{status}: {title} 😅</h1>
 
 	{#if status === 404}
+
+		<RiveCanvas source="rive/satellite-spin.riv"></RiveCanvas>
+
 		<p class="">There is no post at the slug <code>{url.pathname}</code>.</p>
 		<p><a href={'/ideas/?filter=' + url.pathname.slice(1)}>Try searching for it here!</a></p>
 		<p class="">If you believe this was a bug, please let me know! Email swyx [at] swyx.io</p>

@@ -13,6 +13,7 @@
 <script>
 	import Newsletter from '../components/Newsletter.svelte';
 	import FeatureCard from '../components/FeatureCard.svelte';
+	import Sparkles from '../components/sparkles/sparkles.svelte';
 </script>
 
 <svelte:head>
@@ -57,6 +58,7 @@
 			<p class="mb-16 text-gray-600 dark:text-gray-400">
 				<a href={REPO_URL}>View source here!</a>
 			</p>
+
 		</div>
 		<!-- <div
 				class="w-[80px] h-[80px] rounded-full sm:w-[176px] sm:h-[136px] relative mb-8 sm:mb-0 mr-auto bg-cyan-300 bg-opacity-25"
@@ -64,27 +66,39 @@
 	</div>
 
 	<section class="mb-16 w-full">
+		
+		<h3 class="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
+			My Current <Sparkles>Projects</Sparkles>
+		</h3>
+		<div class="flex flex-col gap-6 md:flex-row">
+			<FeatureCard title="Proxima" href="/proxima" stringData="Distributed proxy encoding for DaVinci Resolve with Redis and Celery"/>
+			<FeatureCard title="Patchwork"	href="/patchwork" stringData="Multi-machine rendering via deliverable patching and timeline diffing"/>
+			<FeatureCard title="FEET" href="/moo" stringData="Autohotkey automations for editing in DaVinci Resolve" />
+		</div>
+
+	</section>
+
+	<section class="mb-16 w-full">
 		<h3 class="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
 			Featured Posts
 		</h3>
 		<div class="flex flex-col gap-6 md:flex-row">
-			<FeatureCard title="Welcome to swyxkit 2022!" href="/welcome" stringData="Jan 2022" />
-			<FeatureCard
-				title="Moving to a GitHub CMS"
-				href="/moving-to-a-github-cms"
-				stringData="Jan 2022"
-			/>
-			<FeatureCard title="HTML Ipsum demo" href="/moo" stringData="Jan 2022" />
+			<FeatureCard title="Welcome to swyxkit 2022!" href="/welcome" stringData="Jan 2022"/>
+			<FeatureCard title="Moving to a GitHub CMS" href="/moving-to-a-github-cms" stringData="Jan 2022"/>
+			<FeatureCard title="HTML Ipsum demo" href="/moo" stringData="Jan 2022"/>
 		</div>
+
+		
+
 		<a
-			class="mt-8 flex h-6 rounded-lg leading-7 text-gray-600 transition-all dark:text-gray-400 dark:hover:text-gray-200"
-			href="/blog"
-			>See latest posts<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				class="ml-1 h-6 w-6"
-				><path
+		class="mt-8 flex h-6 rounded-lg leading-7 text-gray-600 transition-all dark:text-gray-400 dark:hover:text-gray-200"
+		href="/blog"
+		>See latest posts<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		viewBox="0 0 24 24"
+		class="ml-1 h-6 w-6"
+		><path
 					stroke="currentColor"
 					stroke-linecap="round"
 					stroke-linejoin="round"

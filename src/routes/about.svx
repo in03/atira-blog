@@ -5,6 +5,10 @@
   // more info https://twitter.com/Rich_Harris/status/1376578504704331778?s=20
 </script>
 
+<script>
+//  import Sparkles from "..src/components/sparkles/Sparkles.svelte"
+</script>
+
 # About Atira.io
 
 Hey! Atiro.io is me (well, yes, just me, for now). 
@@ -36,6 +40,9 @@ If all goes to plan, you'll see plenty of that passion here.
 My software development journey started with a great frustration at manually batching long, 
 expensive renders. I learnt Extendscript, Node.JS, and enough HTML and CSS to be dangerous,
 and created a fairly robust remote-rendering workflow for Adobe Premiere and Media Encoder.
+I had a button for each machine on the network that I could queue the active timeline too.
+It was like magic.
+
 After automating that, I was hooked, and turned my attention to some really hacky UI automation
 with Autohotkey. 
 

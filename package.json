@@ -61,8 +61,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@rive-app/canvas": "^1.0.79",
 		"date-fns": "^2.28.0",
 		"node-fetch": "^3.2.4",
+		"node-scss": "^7.0.3",
 		"parse-link-header": "^2.0.0",
 		"prism-themes": "^1.9.0",
 		"shiki": "^0.10.1",
