@@ -40,7 +40,7 @@
 
 		<p class="">There is no post at the slug <code>{url.pathname}</code>.</p>
 		<p><a href={'/ideas/?filter=' + url.pathname.slice(1)}>Try searching for it here!</a></p>
-		<p class="">If you believe this was a bug, please let me know! Email swyx [at] swyx.io</p>
+		<p class="">If you believe this was a bug, please let me know! Leave an issue at https://github.com/in03/atira-blog.</p>
 	{:else}
 		<p class="font-mono">{message}</p>
 	{/if}
