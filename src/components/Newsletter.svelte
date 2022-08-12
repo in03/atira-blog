@@ -15,7 +15,7 @@
 		class="my-4 w-full border-y border-blue-200 bg-blue-50 p-6 dark:border-gray-600 dark:bg-gray-800 sm:rounded sm:border-x"
 	>
 		<div class="flex items-center justify-between space-x-4 text-gray-900 dark:text-gray-100">
-			<p class="text-lg font-bold md:text-xl">Subscribe to the newsletter</p>
+			<p class="text-lg font-bold md:text-xl">Stay in the loop</p>
 
 			<button
 				aria-label="Toggle Newsletter CTA"
@@ -54,7 +54,7 @@
 		{#if isNewsletterOpen}
 			<p class="my-1 text-gray-800 dark:text-gray-200">
 				Get emails from me about <span class="font-bold"
-					>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, ducimus.</span
+					>post-production tools and automations</span
 				>.
 			</p>
 			<form class="relative my-4" on:submit={onSubmit}>
