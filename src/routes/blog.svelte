@@ -120,6 +120,7 @@
 						{item.description}
 					</IndexCard>
 				</li>
+
 			{/each}
 		</ul>
 		{#if isTruncated}

@@ -198,7 +198,7 @@ function parseIssue(issue) {
 	let labels = [];
 	issue.labels.forEach(label => {
 		if (!publishedTags.includes(label.name)) {
-			console.log(label.name)
+			// console.log(label.name)
 			labels.push(
 				{
 					name: label.name, 
@@ -206,8 +206,8 @@ function parseIssue(issue) {
 				}
 			);
 		}
-	// console.log(issue.title)
-	console.log(labels);
+	// console.debug(issue.title)
+	// console.debug(labels);
 	});
 
 
