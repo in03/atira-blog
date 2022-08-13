@@ -64,8 +64,7 @@
 		Blog
 	</h1>
 	<p class="mb-4 text-gray-600 dark:text-gray-400">
-		Hey! I write about all sorts of stuff here. I've written {items.length} posts! Use the search below to
-		filter by title.
+		Hey! I write about all sorts of stuff here. {items.length} posts and counting!
 	</p>
 	<div class="relative mb-12 w-full">
 		<input
@@ -73,7 +72,7 @@
 			type="text"
 			bind:value={search}
 			bind:this={inputEl}
-			placeholder="Hit / to search"
+			placeholder="Hit '/' to search by tag or title"
 			class="block w-full rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
 		/><svg
 			class="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
