@@ -9,6 +9,7 @@ export type ContentItem = {
 	description: string;
 	category: string;
 	tags: string[];
+	labels: string[];
 	image: string;
 	canonical: string;
 	slug: string;

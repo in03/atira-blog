@@ -67,7 +67,7 @@
 		Hey! I write about all sorts of stuff here. I've written {items.length} posts! Use the search below to
 		filter by title.
 	</p>
-	<div class="relative mb-4 w-full">
+	<div class="relative mb-12 w-full">
 		<input
 			aria-label="Search articles"
 			type="text"
@@ -90,13 +90,13 @@
 		>
 	</div>
 	{#if !search}
-		<h3 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
+		<!-- <h3 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
 			Most Popular
 		</h3>
 
 		<h3 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
 			All Posts
-		</h3>
+		</h3> -->
 	{/if}
 	{#if list.length}
 		<ul class="">
@@ -107,6 +107,7 @@
 						href={item.slug}
 						title={item.title}
 						stringData={new Date(item.date).toISOString().slice(0, 10)}
+						labels={item.labels}
 						ghMetadata={item.ghMetadata}
 					>
 						{item.description}

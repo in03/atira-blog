@@ -194,6 +194,27 @@ function parseIssue(issue) {
 	tags = tags.map((tag) => tag.toLowerCase());
 	// console.log(slug, tags);
 
+	/** @type {any} */
+	let labels = [];
+	issue.labels.forEach(label => {
+		if (!publishedTags.includes(label.name)) {
+			console.log(label.name)
+			labels.push(
+				{
+					name: label.name, 
+					color: "#" + label.color.toLowerCase()
+				}
+			);
+		}
+	// console.log(issue.title)
+	console.log(labels);
+	});
+
+
+
+
+
+
 	return {
 		type: 'blog', // futureproof in case you want to add other types of content
 		content,
@@ -203,6 +224,7 @@ function parseIssue(issue) {
 		description,
 		category: data.category,
 		tags,
+		labels,
 		image: data.image ?? data.cover_image,
 		canonical: data.canonical, // for canonical URLs of something published elsewhere
 		slug: slug.toLowerCase(),

@@ -7,6 +7,7 @@
 	export let title = 'Untitled post';
 	/** @type {string} */
 	export let stringData = 'no date';
+	export let labels = []
 </script>
 
 <a
@@ -27,6 +28,11 @@
 				{/if}
 				<p class="mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">{stringData}</p>
 			</div>
+		</div>
+		<div class="mb-2 justify-start">
+			{#each labels as label}
+				<span class="text-xs mr-2 inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-[{label.color}] text-white rounded-full">{label.name}</span>
+			{/each}
 		</div>
 		<p class="text-gray-600 dark:text-gray-400">
 			<slot />
