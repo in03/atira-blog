@@ -43,13 +43,21 @@
 	let isTruncated = items.length > 20;
 	let search;
 	$: list = items
-		.filter((item) => {
-			if (search) {
-				return item.title.toLowerCase().includes(search.toLowerCase());
-			}
-			return true;
+	.filter((item) => {
+		let labelString = ""
+		item.labels.forEach(label => {
+			labelString += label.name.toString();
 		})
-		.slice(0, isTruncated ? 2 : items.length);
+		if (search) {
+			if(labelString.toLowerCase().includes(search.toLowerCase())){
+				// console.log(`${search.toLowerCase()} in ${labelString.toLowerCase()}`)
+				return true;
+}
+			return item.title.toLowerCase().includes(search.toLowerCase());
+		}
+		return true;
+	})
+	.slice(0, isTruncated ? 2 : items.length);
 </script>
 
 <svelte:head>
