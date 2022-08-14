@@ -8,6 +8,7 @@
 	/** @type {string} */
 	export let stringData = 'no date';
 	export let labels = []
+
 </script>
 
 <a
@@ -32,11 +33,17 @@
 		<div class="mb-2 justify-start">
 			{#each labels as label}
 				<!-- <span>{label.color}</span> -->
-				<span class="text-xs mr-2 inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-[{label.color}] bg-opacity-40 text-[{label.color}] outline outline-1 outline-[{label.color}] rounded-full">{label.name}</span>
+				<span class="text-xs mr-2 inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline 
+							 font-bold outline outline-1 outline-gray-800 dark:outline-gray-300 rounded-full
+							 text-gray-700 dark:text-gray-300"
+					  style="background-color: { label.color }80; outline-color: { label.color }; color: { label.color };"
+					  >
+					  {label.name}
+				</span>
 			{/each}
 		</div>
 		<p class="text-gray-600 dark:text-gray-400">
 			<slot />
 		</p>
-	</div></a
->
+	</div>
+</a>

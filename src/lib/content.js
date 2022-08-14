@@ -10,6 +10,9 @@ import rehypeStringify from 'rehype-stringify';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutoLink from 'rehype-autolink-headings';
 
+
+import convert from 'color-convert'
+
 const remarkPlugins = undefined;
 const rehypePlugins = [
 	rehypeStringify,
@@ -199,10 +202,11 @@ function parseIssue(issue) {
 	issue.labels.forEach(label => {
 		if (!publishedTags.includes(label.name)) {
 			// console.log(label.name)
+			hslColor = convert.hex.hsl(label.color)
 			labels.push(
 				{
 					name: label.name, 
-					color: "#" + label.color.toLowerCase()
+					color: hslColor
 				}
 			);
 		}
