@@ -40,9 +40,9 @@
 							 font-bold outline outline-1 outline-gray-800 dark:outline-gray-300 rounded-full
 							 text-gray-700 dark:text-gray-300"
 
-					  style="background-color: hsla({ label.color[0]}, {label.color[1]}%, {label.color[2]}%, 50%); 
+					  style="background-color: hsla({ label.color[0]}, {label.color[1]}%, {label.color[2]}%, 30%); 
 					  		 outline-color: hsl({ label.color [0]}, {label.color[1]}%, {label.color[2]}%); 
-							 color: hsl({ label.color[0] }, { label.color[1] }%, { label.color[2]+20}%);">
+							 color: hsl({ label.color[0] }, { label.color[1]+10 }%, { label.color[2]+5}%);">
 					  {label.name}
 
 				</span>
