@@ -37,12 +37,11 @@
 
 				<!-- <span>{label.color}</span> -->
 				<span class="text-xs mr-2 inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline 
-							 font-bold outline outline-1 outline-gray-800 dark:outline-gray-300 rounded-full
+							 font-bold rounded-full
 							 text-gray-700 dark:text-gray-300"
 
-					  style="background-color: hsla({ label.color[0]}, {label.color[1]}%, {label.color[2]}%, 30%); 
-					  		 outline-color: hsl({ label.color [0]}, {label.color[1]}%, {label.color[2]}%); 
-							 color: hsl({ label.color[0] }, { label.color[1]+10 }%, { label.color[2]+5}%);">
+					  style="background-color: hsla({ label.color[0]}, {label.color[1]}%, {label.color[2]-20}%, 100%); 
+							 color: { (label.color[2] > 70 ? "black" : "white") };">
 					  {label.name}
 
 				</span>
